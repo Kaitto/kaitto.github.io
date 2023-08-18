@@ -16,7 +16,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
     <!-- https://getbootstrap.com/docs/5.3/examples/ -->
-    <!-- https://getbootstrap.com/docs/5.0/examples/cheatsheet/ -->
+    <!-- https://getbootstrap.com/docs/5.3/examples/cheatsheet/ -->
 
     <!-- Tipografías de google: https://fonts.google.com/ -->
     <!-- Iconos opensource: https://feathericons.com/ -->
@@ -30,36 +30,64 @@
 <body>
     <!-- Layout principal -->
     <div id="main" class="container-fluid">
+        <button type="button" class="btn btn-outline-secondary btn-floating btn-sm" id="btn-back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg>
+        </button>
+        <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContenido" aria-controls="navContenido" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>          
+                <div class="collapse navbar-collapse" id="navContenido">
+                    <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <span class="nav-item lorem xs"></span>
+                        <span class="nav-item lorem xs"></span>
+                        <span class="nav-item lorem xs"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <header>
             <p class="lorem sm"></p>
         </header>
-        <nav>
-            <span class="lorem xs"></span>
-            <span class="lorem xs"></span>
-            <span class="lorem xs"></span>
-        </nav>
         <div id="contenido" class="container-fluid row">
-            <section id="col1" class="col-2 row">
+            <!-- <section id="col1" class="col-2 row">
                 <span> COL1 </span>
-            </section>
+            </section> -->
             <section id="col2" class="col">
-                <div class="container row" >
-                    <section id="personal" class="col-9">
-                        <img id="img_perfil" class="rounded float-start" src="" alt="Foto de perfil">
-                        <p> PERSONAL </p>
-                        <p id="nombre" class="lorem xs"></p>
-                        <span class="lorem sm"></span>
+                <div class="row" >
+                    <section id="personal" class="col-md-8">
+                        <div class="row rol-cols-1">
+                            <div class="col-12">
+                                <img id="data-picture" class="rounded float-start" src="" alt="Foto de perfil">
+                                <p> PERSONAL </p>
+                                <span> Hola! soy </span>
+                                <span id="data-name">Mr.X</span>
+                            </div>
+                            <div class="col-12">
+                                <p>Un poco sobre mi:<br/>
+                                    <span class="lorem sm"></span>                            
+                                </p>
+                            </div>
+                        </div>
+                        
                     </section>
-                    <section id="redes" class="col"> 
+                    <section id="redes" class="col-md-4"> 
                         <p> REDES </p>
-                        <p class="lorem xs"></p>
-                        <p class="lorem xs"></p>
-                        <p class="lorem xs"></p>
-                        <p class="lorem xs"></p>
+                        <ul>
+                            <li>@<span id="data-username"></span></li>
+                            <li>e-mail: <span id="data-email"></span></li>
+                            <li>phone: <span id="data-phone"></span></li>
+                        </ul>
+                        
                     </section>
                 </div>
-                <div class="container row">
-                    <section id="habilidades" class="col-4">
+                
+                <div class="row row-cols-1 row-cols-sm-2">
+                    <section id="habilidades" class="col">
                         <h1 > habilidades</h1>
                         <div>
                             <h2 class="lorem xs"></p>
@@ -78,10 +106,12 @@
                         </div>
                     </section>
                 </div>
+                    
             </section>
         </div>
-        <footer>
-            <p>Footer</p>
+        <footer class="row">
+            <p class="col">Footer</p>
+            <button onclick="generar_datos();backToTop();" class="col">Generar</p>
         </footer>
     </div>
     <!-- Borrador -->
