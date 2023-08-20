@@ -1,13 +1,29 @@
 
 /* diagnostico*/
 
-* {
+/* * {
     border: 1px dashed black;
+} */
+#device-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: block;
 }
-
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
   }
+
+/* Redondear imagen de perfil. tambien se puede hacer con bootstrap ".rounded-*" */
+#data-picture {
+    border-radius: 30%;
+}
+header {
+    background-color: azure;
+}
+footer {
+    background-color: lightgray;
+}

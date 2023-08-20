@@ -30,11 +30,65 @@
 <body>
     <!-- Layout principal -->
     <div id="main" class="container-fluid">
+        <!-- Boton para volver arriba -->
         <button type="button" class="btn btn-outline-secondary btn-floating btn-sm" id="btn-back-to-top">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
             </svg>
         </button>
+        <!-- Icono según dispositivo / breakpoint -->
+        <div id="device-icon" class="container">
+            <!-- Visible only on xs 	.d-block .d-sm-none
+             Visible only on sm 	.d-none .d-sm-block .d-md-none
+             Visible only on md 	.d-none .d-md-block .d-lg-none
+             Visible only on lg 	.d-none .d-lg-block .d-xl-none
+             Visible only on xl 	.d-none .d-xl-block -->
+            <div class="d-block d-sm-none">
+                <span>xs: </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+            </div>
+            <div class="d-none d-sm-block d-md-none">
+                <span>sm: </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tablet"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+            </div>
+            <div class="d-none d-md-block d-lg-none">
+                <span>md: </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-window-fullscreen" viewBox="0 0 16 16">
+                    <path
+                        d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
+                    <path
+                        d="M.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H.5ZM1 5V2h14v3H1Zm0 1h14v8H1V6Z" />
+                </svg>
+            </div>
+            <div class="d-none d-lg-block d-xl-none">
+                <span>lg: </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z" />
+                </svg>
+            </div>
+            <div class="d-none d-xl-block">
+                <span>xl: </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" />
+                </svg>
+            </div>
+        </div>
+        <!-- Navbar pegado arriba de la pagina -->
         <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
@@ -50,66 +104,83 @@
                 </div>
             </div>
         </nav>
+        <!-- header, contenido y footer -->
         <header>
             <p class="lorem sm"></p>
         </header>
-        <div id="contenido" class="container-fluid row">
-            <!-- <section id="col1" class="col-2 row">
+        <div id="contenido" class="row row-cols-1 row-cols-md-2">
+            <!-- Por si necesito agregar mas columnas -->
+            <!-- <section id="col1" class="col-md-2">
                 <span> COL1 </span>
             </section> -->
-            <section id="col2" class="col">
-                <div class="row" >
-                    <section id="personal" class="col-md-8">
-                        <div class="row rol-cols-1">
-                            <div class="col-12">
-                                <img id="data-picture" class="rounded float-start" src="" alt="Foto de perfil">
-                                <p> PERSONAL </p>
-                                <span> Hola! soy </span>
-                                <span id="data-name">Mr.X</span>
-                            </div>
-                            <div class="col-12">
-                                <p>Un poco sobre mi:<br/>
-                                    <span class="lorem sm"></span>                            
-                                </p>
-                            </div>
+            <!-- <section id="col2" class="col col-md-10"> -->
+            <!-- El contenido debe colapsarse en una unica columna en tamaños muy chicos,
+            Luego en columnas de 2 cada una. La informacion personal preferentemente sera
+            en una única columna y lo demas se ajustará al tamaño de la pantalla (1 a 2 columnas),
+            para que las proporciones sean aproximadamente 1/3 en lo posible, luego 1/2 y entonces 1-->
+            <section id="col2" class="col col-md-12">
+                <div class="row rol-cols-1">
+                    <div class="col-12 col-md-4 col-lg-3 text-bg-primary">
+                        <div class="row rol-cols-1 rpl-cols-sm-2" >
+                            <section id="personal" class="col-12 col-sm-6 col-md-12">
+                                <div class="row rol-cols-1">
+                                    <div class="col-12">
+                                        <div class="row gx-4" >
+                                            <div class="col-auto">
+                                                <img id="data-picture" class="float-start" src="" alt="Foto de perfil">
+                                            </div>
+                                            <div class="col">
+                                                <p> PERSONAL </p>
+                                                <span> Hola! soy </span>
+                                                <span id="data-name">Mr.X</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>Un poco sobre mi:<br/>
+                                            <span class="lorem sm"></span>                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="redes" class="col-12 col-sm-6 col-md-12"> 
+                                <p> REDES </p>
+                                <ul>
+                                    <li>@<span id="data-username"></span></li>
+                                    <li>e-mail: <span id="data-email"></span></li>
+                                    <li>phone: <span id="data-phone"></span></li>
+                                </ul>
+                                
+                            </section>
                         </div>
-                        
-                    </section>
-                    <section id="redes" class="col-md-4"> 
-                        <p> REDES </p>
-                        <ul>
-                            <li>@<span id="data-username"></span></li>
-                            <li>e-mail: <span id="data-email"></span></li>
-                            <li>phone: <span id="data-phone"></span></li>
-                        </ul>
-                        
-                    </section>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-9 text-bg-secondary">
+                        <div class="row row-cols-1 row-cols-sm-2">
+                            <section id="habilidades" class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <h1 > habilidades</h1>
+                                <div>
+                                    <h2 class="lorem xs"></p>
+                                    <p class="lorem md"></p>
+                                    <h2 class="lorem xs"></p>
+                                    <p class="lorem md"></p>
+                                </div>
+                            </section>
+                            <section id="experiencia" class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <h1 >experiencia</h1>
+                                <div>
+                                    <h2 class="lorem xs"></p>
+                                    <p class="lorem md"></p>
+                                    <h2 class="lorem xs"></p>
+                                    <p class="lorem md"></p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>                    
                 </div>
                 
-                <div class="row row-cols-1 row-cols-sm-2">
-                    <section id="habilidades" class="col">
-                        <h1 > habilidades</h1>
-                        <div>
-                            <h2 class="lorem xs"></p>
-                            <p class="lorem md"></p>
-                            <h2 class="lorem xs"></p>
-                            <p class="lorem md"></p>
-                        </div>
-                    </section>
-                    <section id="experiencia" class="col">
-                        <h1 >experiencia</h1>
-                        <div>
-                            <h2 class="lorem xs"></p>
-                            <p class="lorem md"></p>
-                            <h2 class="lorem xs"></p>
-                            <p class="lorem md"></p>
-                        </div>
-                    </section>
-                </div>
-                    
             </section>
         </div>
-        <footer class="row">
+        <footer class="container-fluid row">
             <p class="col">Footer</p>
             <button onclick="generar_datos();backToTop();" class="col">Generar</p>
         </footer>
@@ -121,52 +192,7 @@
         <!-- Prueba libreria lorem ipsum para generar texto -->
         <p class="lorem xs"></p>
         <!-- Ocultar y mostrar elementos segun el breakpoint -->
-        <div>
-            <!-- Visible only on xs 	.d-block .d-sm-none
-             Visible only on sm 	.d-none .d-sm-block .d-md-none
-             Visible only on md 	.d-none .d-md-block .d-lg-none
-             Visible only on lg 	.d-none .d-lg-block .d-xl-none
-             Visible only on xl 	.d-none .d-xl-block -->
-            <div class="d-block d-sm-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                </svg>
-            </div>
-            <div class="d-none d-sm-block d-md-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tablet"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
-                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                </svg>
-            </div>
-            <div class="d-none d-md-block d-lg-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-window-fullscreen" viewBox="0 0 16 16">
-                    <path
-                        d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
-                    <path
-                        d="M.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H.5ZM1 5V2h14v3H1Zm0 1h14v8H1V6Z" />
-                </svg>
-            </div>
-            <div class="d-none d-lg-block d-xl-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z" />
-                </svg>
-            </div>
-            <div class="d-none d-xl-block">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" />
-                </svg>
-            </div>
-        </div>
+        
     </div>
 
     <!-- JS de Bootstrap -->
