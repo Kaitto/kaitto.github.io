@@ -93,7 +93,7 @@
             </div>
         </div>
         <!-- Navbar pegado arriba de la pagina -->
-        <nav id="navbar" class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+        <nav id="navbar" class="navbar navbar-expand-md fixed-top">
             <div class="container-fluid ">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContenido" aria-controls="navContenido" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,19 +101,19 @@
                 </button>          
                 <div class="collapse navbar-collapse" id="navContenido">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">                 
-                        <li class="nav-item active">
+                        <li class="rounded-2 nav-item active">
                             <a class="nav-link active" aria-current="page" href="#contenido">Contenido</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="rounded-2 nav-item">
                             <a class="nav-link" aria-current="page" href="#personal">Sobre mí</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="rounded-2 nav-item">
                             <a class="nav-link" aria-current="page" href="#redes">Mis redes</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="rounded-2 nav-item">
                             <a class="nav-link" aria-current="page" href="#habilidades">Habilidades</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="rounded-2 nav-item">
                             <a class="nav-link" aria-current="page" href="#experiencia">Experiencia</a>
                         </li>
                     </ul>
@@ -148,16 +148,16 @@
             <section id="col2" class="col col-md-12">
                 <div class="row rol-cols-1">
                     <div class="container-fluid col-12 col-md-5 col-lg-3">
-                        <div class="row rol-cols-1 row-cols-sm-2" >
+                        <div id="yo" class="row rol-cols-1 row-cols-sm-2" >
                             <section id="personal" class="col col-12 col-sm-6 col-md-12">
-                                <div class="card h-100 bg-primary bg-opacity-25">
+                                <div class="card h-100">
                                     <div id="saludo">
                                         <!-- <div class="col-auto">
                                             <img id="data-picture" class="float-start" src="" alt="Foto de perfil">
                                         </div> -->
                                         <p class="card-header"> PERSONAL </p>
-                                        <div class="card-title col px-3">
-                                            <h4>
+                                        <div class="card-title col pt-3 px-3">
+                                            <h4 class="text-center">
                                                 <span> Hola! soy </span>
                                                 <span id="data-name">Mr.X</span>
                                             </h4>
@@ -170,7 +170,7 @@
                                 </div>
                             </section>
                             <section id="redes" class="col-12 col-sm-6 col-md-12"> 
-                                <div class="card h-100 bg-primary bg-opacity-25">
+                                <div class="card h-100">
                                     <p class="card-header container-fluid text-center justify-content-center"> REDES </p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">@<span id="data-username"></span></li>
@@ -182,9 +182,9 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-7 col-lg-9">
-                        <div class="row gx-2 row-cols-1 row-cols-sm-2">
+                        <div id="datos" class="row gx-2 row-cols-1 row-cols-sm-2">
                             <div class="col-12 col-sm-6 col-md-12 col-lg-3">
-                                <section id="habilidades" class="card h-100 bg-primary bg-opacity-25">
+                                <section id="habilidades" class="card h-100">
                                     <h5 class="card-header">Habilidades</h1>
                                     <div class="card-body">
                                         <ul class="list-group list-group-flush habilidades-lista">
@@ -199,7 +199,7 @@
                                 </section>
                             </div>
                             <div class="col col-12 col-sm-6 col-md-12 col-lg-9">
-                                <section id="experiencia" class="card h-100 bg-primary bg-opacity-25">
+                                <section id="experiencia" class="card h-100">
                                     <h3 class="card-header container-fluid text-left justify-content-left">Experiencia Laboral</h2>
                                     <div class="card-body p-2 list-group">
                                         <div class="experiencia-item list-group-item">
@@ -215,6 +215,7 @@
                                     </div>
                                 </section>
                             </div>
+                            
                             <div class="col">
                                 <p class="lorem sm"></p>
                             </div>

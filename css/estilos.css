@@ -1,3 +1,36 @@
+/* variables css */
+:root {
+    /* https://coolors.co/generate */
+    --col-n1: hsla(0, 0%, 0%, 1);
+    --col-cx: hsla(120, 4%, 91%, 0.75);
+    --col-c0: hsla(0, 0%, 100%, 1);
+    --col-n2: hsla(196, 10%, 21%, 1);
+    --col-c2: hsla(217, 100%, 56%, 0.7);
+    --col-c3: hsla(207, 98%, 60%, 0.5);
+    --col-c4: hsla(44, 98%, 62%, 0.5);
+    --col-c5: hsla(33, 93%, 55%, 1);
+    --grad-c1: linear-gradient(
+        to bottom,
+        var(--col-c2),
+        var(--col-c3)
+      );
+    --grad-c2: linear-gradient(
+        to bottom,
+        var(--col-c4),
+        var(--col-c5)
+      );
+      --grad-c5t2: linear-gradient(
+        to bottom,
+        var(--col-c5),
+        var(--col-c2)
+      );
+      --grad-c3t4: linear-gradient(
+        to bottom,
+        var(--col-c3),
+        var(--col-c4)
+      );
+}
+
 
 /* diagnostico*/
 
@@ -27,4 +60,53 @@
 footer {
     background-color: lightgray;
 } */
+
+#main {
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        var(--col-c2)
+      ), url("/img/bg/pexels-rovenimagescom-949587.jpg");
+    background-color: transparent;
+    background-size: cover;
+}
+
+header {
+    background: var(--grad-c2);
+    color:var(--col-n0);
+    text-shadow: 3px 2px 2px var(--col-c0);
+}
+.card-header{
+    background: var(--grad-c2);
+    color: var(--col-n0);
+    text-shadow: 3px 2px 2px var(--col-n1);
+}
+.card,
+.list-group-item,
+.card-body {
+    background: var(--grad-c1);
+    color: var(--col-c0);
+    text-shadow: 3px 2px 2px var(--col-n1);
+}
+
+#datos .card-header{
+    background-color: var(--col-c2);
+    color: var(--col-c0);
+}
+#datos .card,
+#datos .list-group-item {
+    background-color: var(--col-c3);
+    color: var(--col-c0);
+}
+
+.navbar{
+    background-color: var(--col-c5);
+    color: var(--col-n0);
+    text-shadow: 1px 1px 2px var(--col-c0);
+}
+
+.nav-item{
+    background: var(--grad-c2);
+}
+
   
