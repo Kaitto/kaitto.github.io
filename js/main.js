@@ -4,8 +4,14 @@
 */
 function actualizar_datos(data) {
   let name = data.results[0].name;
+  const txtName=`${name.title} ${name.first} ${name.last}`;
   let d = data.results[0];
-  $("#data-name").html(`${name.title} ${name.first} ${name.last}`);
+  let eNames=document.getElementsByClassName("data-name");
+  for (e of eNames){
+    e.textContent=txtName;
+  };
+  $("#data-name").html(txtName);
+
   $("#data-picture").attr("src", d.picture.medium);
   $("#data-picture").attr("hidden", false);
   $("#data-dob-date").html(`${d.dob.date}`);
