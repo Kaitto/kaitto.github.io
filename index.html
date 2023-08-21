@@ -22,11 +22,15 @@
     <!-- Iconos opensource: https://feathericons.com/ -->
     <!-- Iconos bootstrap: https://icons.getbootstrap.com/ -->
     <link rel="stylesheet" href="css/estilos.css">
-
-
-
 </head>
-
+<!-- 
+    BG:
+    https://www.pexels.com/photo/blue-and-purple-cosmic-sky-956999/
+    https://www.pexels.com/photo/brown-wooden-parquet-flooring-129731/
+    https://www.pexels.com/photo/defocused-image-of-lights-255379/
+    https://www.pexels.com/photo/blurry-image-of-a-brownish-background-1242348/
+    https://www.pexels.com/photo/yellow-bokeh-photo-949587/
+ -->
 <body>
     <!-- Layout principal -->
     <div id="main" class="container-fluid">
@@ -89,7 +93,7 @@
             </div>
         </div>
         <!-- Navbar pegado arriba de la pagina -->
-        <nav id="navbar" class="navbar sticky-top navbar-expand-md bg-body-tertiary">
+        <nav id="navbar" class="navbar navbar-expand-md bg-body-tertiary fixed-top">
             <div class="container-fluid ">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContenido" aria-controls="navContenido" aria-expanded="false" aria-label="Toggle navigation">
@@ -118,13 +122,14 @@
         </nav>
         <!-- header, contenido y footer -->
         <!-- Separar navbar del contenido -->
-        <hr class="hr invisible"/>
-        <header id="header" class="gy-3 px-2 row gap-3 border border-3 rounded-pill">
+        <hr class="hr invisible my-4"/>
+        <hr class="hr invisible my-2"/>
+        <header id="header" class="gx-2 px-2 row gap-3 border border-3 rounded-5">
             <div class="col-auto d-flex align-items-center">
                 <img id="data-picture" class="float-start" src="" alt="Foto de perfil">
             </div>
-            <div class="col">
-                <div class="container-fluid bg-body-tertiary text-center justify-content-center">
+            <div class="col d-flex align-items-center">
+                <div class="container-fluid text-center justify-content-center">
                     <h1 class="data-name" ></h1>
                     <p >Desarrollador Web Front-End</p>
                 </div>
@@ -142,10 +147,10 @@
             para que las proporciones sean aproximadamente 1/3 en lo posible, luego 1/2 y entonces 1-->
             <section id="col2" class="col col-md-12">
                 <div class="row rol-cols-1">
-                    <div class="container-fluid col-12 col-md-5 col-lg-3 text-bg-primary">
+                    <div class="container-fluid col-12 col-md-5 col-lg-3">
                         <div class="row rol-cols-1 row-cols-sm-2" >
                             <section id="personal" class="col col-12 col-sm-6 col-md-12">
-                                <div class="card h-100">
+                                <div class="card h-100 bg-primary bg-opacity-25">
                                     <div id="saludo">
                                         <!-- <div class="col-auto">
                                             <img id="data-picture" class="float-start" src="" alt="Foto de perfil">
@@ -165,7 +170,7 @@
                                 </div>
                             </section>
                             <section id="redes" class="col-12 col-sm-6 col-md-12"> 
-                                <div class="card h-100">
+                                <div class="card h-100 bg-primary bg-opacity-25">
                                     <p class="card-header container-fluid text-center justify-content-center"> REDES </p>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">@<span id="data-username"></span></li>
@@ -176,10 +181,10 @@
                             </section>
                         </div>
                     </div>
-                    <div class="col-12 col-md-7 col-lg-9 text-bg-secondary">
+                    <div class="col-12 col-md-7 col-lg-9">
                         <div class="row gx-2 row-cols-1 row-cols-sm-2">
                             <div class="col-12 col-sm-6 col-md-12 col-lg-3">
-                                <section id="habilidades" class="card h-100">
+                                <section id="habilidades" class="card h-100 bg-primary bg-opacity-25">
                                     <h5 class="card-header">Habilidades</h1>
                                     <div class="card-body">
                                         <ul class="list-group list-group-flush habilidades-lista">
@@ -194,9 +199,9 @@
                                 </section>
                             </div>
                             <div class="col col-12 col-sm-6 col-md-12 col-lg-9">
-                                <section id="experiencia" class="card h-100">
+                                <section id="experiencia" class="card h-100 bg-primary bg-opacity-25">
                                     <h3 class="card-header container-fluid text-left justify-content-left">Experiencia Laboral</h2>
-                                    <div class="card-body list-group">
+                                    <div class="card-body p-2 list-group">
                                         <div class="experiencia-item list-group-item">
                                             <h3>Desarrollador Front-End, Empresa ABC</h3>
                                             <p>Desarrollé y mantuve sitios web utilizando HTML, CSS y JavaScript.</p>

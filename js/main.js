@@ -65,7 +65,18 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-
+// Ajustes de anchor (los links no tienen en cuenta el tamaño del navbar flotante)
+// Debería ser constante (excepto al desplegar)
+const nav_height = $('#navbar').height() +16;
+// Al hacer click
+$('.nav-link').click(function(e){
+  let divCoords = $(e.target.hash).offset();
+  e.preventDefault();
+  window.scrollTo({
+  left: divCoords.left, 
+  top: divCoords.top - nav_height,
+  behavior: 'smooth'
+  });
+});
 
 
