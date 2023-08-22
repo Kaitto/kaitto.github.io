@@ -12,7 +12,7 @@ function actualizar_datos(data) {
   };
   $("#data-name").html(txtName);
 
-  $("#data-picture").attr("src", d.picture.medium);
+  $("#data-picture").attr("src", d.picture.large);
   $("#data-picture").attr("hidden", false);
   $("#data-dob-date").html(`${d.dob.date}`);
   $("#data-dob-age").html(`${d.dob.age}`);

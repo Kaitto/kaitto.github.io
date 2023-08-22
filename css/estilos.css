@@ -5,9 +5,9 @@
     --col-cx: hsla(120, 4%, 91%, 0.75);
     --col-c0: hsla(0, 0%, 100%, 1);
     --col-n2: hsla(196, 10%, 21%, 1);
-    --col-c2: hsla(217, 100%, 56%, 0.7);
-    --col-c3: hsla(207, 98%, 60%, 0.5);
-    --col-c4: hsla(44, 98%, 62%, 0.5);
+    --col-c2: hsla(217, 100%, 25%, 0.7);
+    --col-c3: hsla(207, 98%, 40%, 0.5);
+    --col-c4: hsla(44, 98%, 40%, 0.5);
     --col-c5: hsla(33, 93%, 55%, 1);
     --grad-c1: linear-gradient(
         to bottom,
