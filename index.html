@@ -7,7 +7,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <!-- Pagina web responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Curriculum Vitae</title>
     <!-- JQuery (libreria js para simplificar ajax y control dom)-->
     <!-- Usos: https://jquery.com/ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -24,12 +24,16 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <!-- 
+    Atribuciones:
     BG:
     https://www.pexels.com/photo/blue-and-purple-cosmic-sky-956999/
     https://www.pexels.com/photo/brown-wooden-parquet-flooring-129731/
     https://www.pexels.com/photo/defocused-image-of-lights-255379/
     https://www.pexels.com/photo/blurry-image-of-a-brownish-background-1242348/
     https://www.pexels.com/photo/yellow-bokeh-photo-949587/
+    IMG:
+    https://unsplash.com/es/fotos/cFFEeHNZEqw
+    https://unsplash.com/es/fotos/ipARHaxETRk
  -->
 <body>
     <!-- Layout principal -->
@@ -102,7 +106,7 @@
                     <span>Mi CV</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContenido" aria-controls="navContenido" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div class="navbar-toggler-icon"></div>
                 </button>          
                 <div class="collapse navbar-collapse" id="navContenido">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">                 
@@ -167,7 +171,7 @@
                 </div>
                 <div class="col d-flex align-items-center">
                     <div class="text-center justify-content-center">
-                        <strong><h1 class="data-name" ></h1></strong>
+                        <h1 class="data-name"></h1>
                         <h4 >
                             <em><b>Desarrollador Web Front-End</b></em>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
@@ -217,7 +221,13 @@
                                           </svg>
                                           <span>Un poco sobre mi:</span>
                                         </h5>
-                                        <p class="card-body lorem sm"></p>
+                                        <!-- <p class="card-body lorem sm"></p> -->
+                                        <p>
+                                            Provengo de <span id="data-location-country"></span>, de la ciudad <span id="data-location-city"></span><br>
+                                            Tengo <span id="data-dob-age"></span> años y tengo cierta experiencia personal en programación y diseño web.<br>
+                                            <span class="lorem sm"></span>
+                                            Bienvenido!
+                                        </p>
                                     </div>
                                 </div>
                             </section>
@@ -291,6 +301,9 @@
                                               <span>Git</span>
                                             </li>
                                         </ul>
+                                        <hr>
+                                        <h5>Un vídeo muy util:</h5>
+                                        <iframe class="my-4" width="100%" height="auto" src="https://www.youtube.com/embed/3yM5uXp-T_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                 </section>
                             </div>
@@ -299,33 +312,64 @@
                                     <h3 class="card-header container-fluid text-left justify-content-left">Experiencia Laboral</h2>
                                     <div class="card-body p-2 list-group">
                                         <div class="experiencia-item list-group-item">
-                                            <h3>
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                                                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                                              </svg>
-                                              Desarrollador Front-End, Empresa ABC</h3>
-                                            <p>Desarrollé y mantuve sitios web utilizando HTML, CSS y JavaScript.</p>
-                                            <p>Trabajé en colaboración con el equipo de diseño para implementar las interfaces de usuario.</p>
+                                            <div class="row row-cols-2">
+                                                <div class="col-8">
+                                                    <h3>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
+                                                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+                                                        </svg>
+                                                        Desarrollador Front-End, Empresa ABC
+                                                    </h3>
+                                                    <p>Desarrollé y mantuve sitios web utilizando HTML, CSS y JavaScript.</p>
+                                                    <p>Trabajé en colaboración con el equipo de diseño para implementar las interfaces de usuario.</p>
+                                                </div>
+                                                <div class="col-4 text-center">
+                                                    <figure>
+                                                        <blockquote class="blockquote">
+                                                            <img src="img/kevin-canlas-cFFEeHNZEqw-unsplash.jpg" class="img-fluid img-thumbnail">
+                                                        </blockquote>
+                                                        <figcaption class="blockquote-footer">
+                                                            Foto de <a href="https://unsplash.com/es/@kvncnls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Canlas</a> en <a href="https://unsplash.com/es/fotos/cFFEeHNZEqw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
+                                                        </figcaption>
+                                                    </figure>                                                    
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="experiencia-item list-group-item">
-                                            <h3>
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                                                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                                                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                                              </svg>
-                                              Pasantía en Diseño Web, Agencia XYZ</h3>
-                                            <p>Colaboré en proyectos de diseño web, creando maquetas y prototipos interactivos.</p>
-                                            <p>Adquirí experiencia en el uso de herramientas de diseño y mockups.</p>
+                                            <div class="row row-cols-2">
+                                                <div class="col-8">
+                                                    <h3>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
+                                                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+                                                    </svg>
+                                                    Pasantía en Diseño Web, Agencia XYZ
+                                                    </h3>
+                                                    <p>Colaboré en proyectos de diseño web, creando maquetas y prototipos interactivos.</p>
+                                                    <p>Adquirí experiencia en el uso de herramientas de diseño y mockups.</p>
+                                                </div>
+                                                <div class="col-4 text-center">
+                                                    <figure>
+                                                        <blockquote class="blockquote">
+                                                            <img src="img/kobu-agency-ipARHaxETRk-unsplash.jpg" class="img-fluid img-thumbnail" alt="...">
+                                                        </blockquote>
+                                                        <figcaption class="blockquote-footer">
+                                                            Foto de <a href="https://unsplash.com/es/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">KOBU Agency</a> en <a href="https://unsplash.com/es/fotos/ipARHaxETRk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                                        </figcaption>
+                                                    </figure>   
+                                                    
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </section>
                             </div>
                             
-                            <div class="col">
+                            <div class="card col">
                                 <p class="lorem sm"></p>
                             </div>
-                            <div class="col">
+                            <div class="card col">
                                 <p class="lorem sm"></p>
                             </div>
                         </div>
@@ -334,22 +378,22 @@
                 
             </section>
         </div>
-        <hr class="separador hr invisible"/>
-        <footer id="footer" class="container-fluid row">
-            <p class="col lorem sm">Footer</p>
-            <button onclick="generar_datos();backToTop();" class="col">Generar</p>
+        <hr class="separador hr"/>
+        <footer id="footer">
+            <div class="border-3 border-dark row text-center p-3 mb-2">
+                <div class="col-8">
+                    <p>Pagina diseñada por <a href="mailto:davidcaballero95@yahoo.com.ar" data-bs-toggle="tooltip" data-bs-title="Mi email">David M.Caballero</a> para el curso 'Primeros pasos del desarrollo frontend' de TICMAS (2023)</p>
+                    <p>Fondo por rovenimages.com desde <a href="https://www.pexels.com/photo/yellow-bokeh-photo-949587/">Pexels</a></p>
+                </div>
+                <div class="col">
+                    <p>Esta página contiene datos y fotos ficticios generado con <a href="https://randomuser.me/">RandomUser.Me</a>
+                    Para cargar otra identidad, recargar la página o presione el siguiente boton <button onclick="generar_datos();backToTop();" type="button" class="btn btn-secondary mx-3">Generar</button>
+                </p>
+                    
+                </div>
+            </div>
         </footer>
     </div>
-    <!-- Borrador -->
-    <div hidden>
-        <!-- <img id="img_perfil" src="" alt="Mi foto no se pudo cargar" hidden="true" /> -->
-        <!-- <p id="nombre">Mi nombre</p> -->
-        <!-- Prueba libreria lorem ipsum para generar texto -->
-        <p class="lorem xs"></p>
-        <!-- Ocultar y mostrar elementos segun el breakpoint -->
-        
-    </div>
-
     <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

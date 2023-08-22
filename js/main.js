@@ -44,6 +44,9 @@ function generar_datos() {
   });
 }
 generar_datos();
+//Inicializar tooltips para bootstrap
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Boton rápido para volver al inicio
 let btnBack = document.getElementById("btn-back-to-top");
@@ -70,13 +73,18 @@ function backToTop() {
 const nav_height = $('#navbar').height() +16;
 // Al hacer click
 $('.nav-link').click(function(e){
-  let divCoords = $(e.target.hash).offset();
-  e.preventDefault();
-  window.scrollTo({
-  left: divCoords.left, 
-  top: divCoords.top - nav_height,
-  behavior: 'smooth'
-  });
+  // let divCoords = $(e.target.hash).offset();
+  let targetHref=$(this).attr('href');
+  if (targetHref) {
+    // Get the target element's offset coordinates
+    let divCoords = $(targetHref).offset();
+    e.preventDefault();
+    window.scrollTo({
+    left: divCoords.left, 
+    top: divCoords.top - nav_height,
+    behavior: 'smooth'
+    });
+  };
 });
 
 

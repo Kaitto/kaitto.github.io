@@ -5,10 +5,10 @@
     --col-cx: hsla(120, 4%, 91%, 0.75);
     --col-c0: hsla(0, 0%, 100%, 1);
     --col-n2: hsla(196, 10%, 21%, 1);
-    --col-c2: hsla(217, 100%, 25%, 0.7);
-    --col-c3: hsla(207, 98%, 40%, 0.5);
-    --col-c4: hsla(44, 98%, 40%, 0.5);
-    --col-c5: hsla(33, 93%, 55%, 1);
+    --col-c2: hsla(250, 78%, 11%, 0.7);
+    --col-c3: hsla(213, 53%, 20%, 0.5);
+    --col-c4: hsla(219, 36%, 34%, 0.5);
+    --col-c5: hsla(166, 28%, 65%, 1);
     --grad-c1: linear-gradient(
         to bottom,
         var(--col-c2),
@@ -107,6 +107,13 @@ header {
 
 .nav-item{
     background: var(--grad-c2);
+}
+#footer {
+    background-color: var(--col-n1);
+    color: var(--col-c0);
+}
+#lorem {
+    font-style: italic;
 }
 
   
