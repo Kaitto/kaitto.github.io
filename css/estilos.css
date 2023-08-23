@@ -70,7 +70,12 @@ footer {
     background-color: transparent;
     background-size: cover;
 }
-
+p,span,a,button,h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+#cargo{
+    font-family: 'Dancing Script', cursive;
+}
 header {
     background: var(--grad-c2);
     color:var(--col-n0);
